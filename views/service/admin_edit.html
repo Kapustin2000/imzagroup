@@ -1,0 +1,213 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<style>
+    .service_l6{
+        background:none;
+        min-width:100%;
+        min-height:180px;
+        text-align:center;
+    }
+    .what_u_get_left{
+        background:none;
+        text-align:left;
+    }
+    .what_u_get_right{
+        background:none;
+        text-align:right;
+    }
+</style>
+
+</head>
+<body>
+<form  method="POST" enctype="multipart/form-data">
+<section>
+    <div class="title">
+        <p><input class="title_block"  value="<?=$data['text']['h1']?>" type="text" name="h1"
+                    ></p>
+    </div>
+</section>
+
+<section id="work">
+    <div class="row">
+        <div class="   col l6 m6 s12">
+            <div class="numbers_01">
+                <p class="service_p1"><input class="title_block" value="<?=$data['text']['block1_h1']?>" type="text" name="block1_h1"
+
+                                                        ></p>
+            </div>
+            <p class="service_p2"><input class="title_block" value="<?=$data['text']['block1_h2']?>" type="text" name="block1_h2"
+
+                                           ></p>
+            <hr>
+            <div class="our_service_block">
+                <textarea type="text" name="block1_text" class="service_l6" ><?=$data['text']['block1_text']?></textarea><br>
+            </div>
+        </div>
+        <div class="service1 absolute for col l6 m6 s12">
+                <label class="total" for="add_photo1"><div class="add"><img src="/img/add.png"></div></label>
+                <input style="display:none;" name='add_photo1[]' id="add_photo1"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+
+    </div>
+</section>
+<section class="blue">
+    <div class="my-container">
+        <div class="what_u_get_left">
+            <p><input class="what_u_get_left" value="<?=$data['text']['what_get1']?>" type="text" name="what_get1"></p>
+            <hr class="what_u_get_left_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block1_icon1_text']?>" type="text" name="block1_icon1_text"
+
+                                       ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block1_icon2_text']?>"  type="text" name="block1_icon2_text"
+
+                                       ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block1_icon3_text']?>"  type="text" name="block1_icon3_text"
+
+                                      ></p>
+        </div>
+
+    </div>
+</section>
+<section id="work">
+    <div class="row">
+        <div class="service2 absolute for col l6 m6 s12">
+                  <label class="total" for="add_photo2"><div class="add"><img src="/img/add.png"></div></label>
+                <input style="display:none;" name='add_photo2[]' id="add_photo2" type='file' multiple='true' min='1' max='10' class="form-control"/>
+        </div>
+        <div class="   col l6 m6 s12">
+            <div class="numbers_02">
+                <p class="service_p1"><input class="title_block" value="<?=$data['text']['block2_h1']?>" type="text" name="block2_h1"
+
+                                              ></p>
+            </div>
+            <p class="service_p2"><input class="title_block" value="<?=$data['text']['block2_h2']?>" type="text" name="block2_h2"
+
+                                          ></p>
+            <hr>
+            <div class="our_service_block">
+                <textarea type="text" name="block2_text" class="service_l6" ><?=$data['text']['block2_text']?></textarea><br>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="red">
+    <div class="my-container">
+        <div class="what_u_get_right">
+            <p><input class="what_u_get_right" value="<?=$data['text']['What_u_get2']?>"  type="text" name="What_u_get2"
+
+                       ></p>
+            <hr class="what_u_get_right_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block2_icon1_text']?>" type="text" name="block2_icon1_text"
+
+                                      ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block2_icon2_text']?>" type="text" name="block2_icon2_text"
+
+                                      ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block2_icon3_text']?>" type="text" name="block2_icon3_text"
+
+                                    ></p>
+        </div>
+
+    </div>
+</section>
+<section id="work">
+    <div class="row">
+        <div class="   col l6 m6 s12">
+            <div class="numbers_03">
+                <p class="service_p1"><input class="title_block" value="<?=$data['text']['block3_h1']?>" type="text" name="block3_h1"
+
+                                              ></p>
+            </div>
+            <p class="service_p2"><input class="title_block" value="<?=$data['text']['block3_h2']?>" type="text" name="block3_h2"
+
+                                          ></p>
+            <hr>
+            <div class="our_service_block">
+                <textarea type="text" name="block3_text" class="service_l6" ><?=$data['text']['block3_text']?></textarea><br>
+            </div>
+        </div>
+        <div class="service3 absolute for col l6 m6 s12">
+               <label class="total" for="add_photo3"><div class="add"><img src="/img/add.png"></div></label>
+                <input style="display:none;" name='add_photo3[]' id="add_photo3"  type='file' multiple='true'  min='1' max='10'  class="form-control"/>
+        </div>
+        </div>
+    </div>
+</section>
+<section class="blue border_bottom">
+    <div class="my-container">
+        <div class="what_u_get_left">
+            <p> <input class="what_u_get_left" value="<?=$data['text']['what_get3']?>" type="text" name="what_get3"
+
+                                   ></p>
+            <hr class="what_u_get_left_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block3_icon1_text']?>" type="text" name="block3_icon1_text"
+
+                                       ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block3_icon2_text']?>" type="text" name="block3_icon2_text"
+
+                                       ></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span></span></div>
+            <p class="get_adv"><input class="title_block" value="<?=$data['text']['block3_icon3_text']?>" type="text" name="block3_icon3_text"
+
+                                               ></p>
+        </div>
+
+    </div>
+</section>
+<section style="background-color:#414371;position:relative;">
+    <div class="my-container">
+        <div class="row">
+            <p class="ready"><input class="title_block" value="<?=$data['text']['footer_ask']?>" type="text" name="footer_ask"
+
+                                                    ></p>
+            <p class="hire"><input class="title_block" value="<?=$data['text']['Hire']?>" type="text" name="Hire"
+
+                                           ></p>
+            <hr class="hr_footer">
+        </div>
+    </div>
+</section>
+    <input type="submit" name="submit" class="submit button-02" value="SEND"/>
+</form>
+</body>
+</html>

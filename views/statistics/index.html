@@ -1,0 +1,116 @@
+<style>
+    label {
+        font-weight: normal;
+    }
+</style>
+<div id="content">
+    <h1 class="imk">Интернет-магазин кроссовок</h1>
+    <br>
+    <div class="hr">
+        <hr class="hr-bg">
+    </div>
+    <div class="advantage-wrapper">
+        <div class="advantage">
+            <img src="/img/advantage.png" alt="">
+        </div>
+    </div>
+    <div class="hr">
+        <hr class="hr-bg">
+    </div>
+
+    <div class="main" id="category1">
+        <a href="/catalog" class="section">Популярное></a>
+        <div class="a">
+            <?php foreach($data['is_popular'] as $row){ ?>
+            <div class="product">
+                <div class="image">
+                    <a href="products/edit/<?=$row['id']?>">
+                        <img src="/uploads/products/<?=$row['img']?>.png" alt="" class="img_prod">
+                    </a>
+                    <p class="name_prod"><?=$row['title']?></p>
+                </div>
+            </div>
+            <?php }  ?>
+        </div>
+    </div>
+    <div class="hr">
+        <hr class="hr-bg">
+    </div>
+    <div class="hr">
+        <hr class="hr-bg">
+    </div>
+    <div class="main" id="category2">
+        <a href="/catalog" class="section">Каталог></a>
+        <div class="a">
+            <?php foreach($data['company'] as $catalog){ ?>
+            <div class="brand">
+                <a href="">
+                    <img src="/uploads/company/<?=$catalog['img']?>.png" alt="">
+                </a>
+            </div>
+            <?php }  ?>
+        </div>
+    </div>
+    <div class="hr">
+        <hr class="hr-bg">
+    </div>
+    <div class="main" id="category3">
+        <a href="/sales" class="section">Скидки></a>
+        <div class="a">
+            <?php foreach($data['sales'] as $sale){ ?>
+            <div class="product">
+                <div>
+                    <sapn class="triangle">
+                        <span class="sale-prod">-<?=$sale['is_sale']?>%</span>
+                    </sapn>
+                    <div class="image">
+                        <a href="products/edit/<?=$sale['id']?>">
+                            <img src="/img/products/not.png" alt="" class="img_prod">
+                        </a>
+                        <p class="name_prod"><?=$sale['title']?></p>
+                    </div>
+                </div>
+
+            </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+<!--<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <?php foreach($data['attr_result'] as $key => $attrs){ ?>
+                <div class="form-group">
+                    <b><?=$key?></b><br>
+                    <?php foreach($attrs as $attr_val_id => $attr_val){ ?>
+                    <input <?php if(in_array($attr_val_id, $data['selected_filters'])){ ?>checked="checked"<?php } ?> id="attr_<?=$attr_val_id?>" name="filter[]" type="checkbox" value="<?=$attr_val_id?>" />
+                    <label for="attr_<?=$attr_val_id?>"><?=$attr_val?></label><br>
+                    <?php } ?>
+                </div>
+                <?php } ?>
+                <input type="submit" value="Фильтровать" />
+                <input type="reset" value="Сбросить" />
+            </form>
+        </div>
+        <div class="col-md-8">
+
+            <?php if(empty($data['products'])){ ?>
+
+            Товаров пока нет.
+
+            <?php } else { ?>
+
+            <?php foreach($data['products'] as $product){ ?>
+            <div style="margin-top:20px;padding-bottom:20px;">
+                <h4><a href="/products/view/<?=$product['alias']?>"><?=$product['title']?></a></h4>
+                <p><?=$product['description']?></p>
+                <p><b>Цена: <?=number_format($product['price'],2)?> грн</b></p>
+            </div>
+            <?php } ?>
+
+            <?php } ?>
+
+        </div>
+    </div>
+</div>-->

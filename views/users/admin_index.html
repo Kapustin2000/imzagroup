@@ -1,0 +1,76 @@
+<!--<h3>Users</h3></br>
+
+<table class="table table-striped" style="width: 100%;">
+    <tr>
+        <td style="width: 10%;">Email</td>
+        <td style="width: 25%;">Login</td>
+        <td style="width: 25%;">Role</td>
+    </tr>
+
+    <?php foreach($data as $arr){ ?>
+    <tr>
+        <td><?php echo $arr['login'] ?></td>
+        <td><?php echo $arr['email'] ?></td>
+        <td><?php echo $arr['role'] ?></td>
+    </tr>
+    <?php } ?>
+</table>-->
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+            <li class="active">Icons</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Tables</h1>
+        </div>
+    </div><!--/.row-->
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Advanced Table</div>
+                <div class="panel-body">
+                    <table data-toggle="table" data-url="tables/data1.json"  data-show-plus-sign="true" data-show-toggle="true"  data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
+                        <thead>
+                        <tr>
+                            <th data-field="state" data-checkbox="true" >Item ID</th>
+                            <th data-field="id" data-sortable="true">Item ID</th>
+                            <th data-field="name"  data-sortable="true">Item Name</th>
+                            <th data-field="price" data-sortable="true">Item Price</th>
+                            <th data-field="status" data-sortable="true">Статус</th>
+                            <th data-field="date" data-sortable="true">Дата регистрации</th>
+                            <th data-field="actions" data-sortable="true">Действие</th>
+                        </tr>
+                        </thead>
+                        <?php foreach($data as $arr){ ?>
+                        <tr>
+                            <td><div class="pull-right action-buttons todo-list" >
+                                <a href="/admin/products/edit/<?=$item['id']?>"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"></use></svg></a>
+                                <a href="/products/edit/7" class="flag"><svg class="glyph stroked flag"><use xlink:href="#stroked-flag"></use></svg></a>
+                                <a href="/admin/products/delete/<?=$item['id']?>" class="trash"><svg class="glyph stroked trash"><use xlink:href="#stroked-trash"></use></svg></a>
+                            </div></td>
+                            <td><?php echo $arr['login'] ?></td>
+                            <td><?php echo $arr['email'] ?></td>
+                            <td><?php echo $arr['role'] ?></td>
+                            <td><?php if($arr['is_active']==1){ echo "Онлайн"; }else{ echo "Офлайн"; } ?></td>
+                            <td><?php echo $arr['dt_registration'] ?></td>
+                            <td>	<div class="pull-right action-buttons todo-list" >
+                                <a href="/admin/users/info/<?=$arr['id']?>"  class="flag"><svg class="glyph stroked eye"><use xlink:href="#stroked-eye"/></svg></a>
+                                <a href="/admin/users/delete/<?=$arr['id']?>" onclick="return confirmDelete();" class="trash"><svg class="glyph stroked trash"><use xlink:href="#stroked-trash"></use></svg></a>
+                            </div></td>
+                        </tr>
+                        <?php } ?>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div><!--/.row-->
+
+
+
+</div><!--/.main-->

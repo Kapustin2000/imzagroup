@@ -1,0 +1,134 @@
+<style>
+    .blog__inside_picture {
+        background: url(/uploads/blog/<?=$data['img']?>.jpg) no-repeat;
+        height: 440px;
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: top;
+        margin-bottom: 40px;
+    }
+    @media screen and (max-width: 600px) and (min-width: 300px){
+        .row .col.l4 {
+            width: 100%;
+        }
+        .quo{
+            left:0;
+        }
+    }
+</style>
+<body>
+<div class="loader"></div>
+<section>
+    <div class="title">
+        <p>Blog</p>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+
+            </div>
+            <div class="modal-body">
+                <div class="title">
+                    <p><?=__("Subscribe","Subscribe")?></p>
+                </div>
+                <form id="submitForm" method="POST">
+                    <div class="form_result"></div>
+                    <div class="row">
+                        <div class="col l6 m6 s12">
+                        <input id="name_form2" value="" type="text" name="name" pattern="^[а-яА-ЯёЁa-zA-Z]+$"
+                               placeholder="ФИО" maxlength="20" required="">
+</div>  <div class="col l6 m6 s12">
+                        <input id="email_form2" value="" type="email" name="email" placeholder="Введите email" required="">
+</div>
+
+                        <input type="submit" name="submit" class="submit button-10" value="SEND"/>
+                    </div>
+                    <!--<form id="application" action="application.php" method="POST" name="application">-->
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Модальное окно 1 -->
+    <div class="my-container">
+        <div class="half_container">
+            <p class="blog_inside_title"><?=$data['blog']['title']?></p>
+            <p class="blog_inside_date"><?=$data['blog']['dt_creation']?></p>
+            <p class="blog_inside_first_text"><?=$data['blog']['text']?></p>
+        </div>
+        <div class="blog__inside_picture">
+
+        </div>
+        <div class="half_container">
+            <p class="blog_inside_first_text"><?=$data['blog']['text2']?></p>
+
+            <div class="blue">
+                <div class="row">
+                    <div class="col l2 m6 s12">
+                        <span class="quo">&#8221;</span>
+                    </div>
+                    <div class="col l8 m6 s12">
+                        <p class="theme"><?=$data['blog']['quot']?></p>
+                    </div>
+                </div>
+            </div>
+            <p class="blog_inside_last_text"><?=$data['blog']['text3']?></p>
+        </div>
+
+        <div class="row">
+
+
+            <div class=" col l4 m6 s12">
+               <?php if(isset($data['previous']) && $data['previous']!=null ){ ?> <a href="/<?=App::getRouter()->getLanguage()?>/blog/view/<?=$data['previous']['alias']?>/"><button class="button-03">Previous Page</button></a> <?php }else{ ?><div class="button_block"></div>  <?php } ?>
+            </div>
+            <div class=" col l4 m6 s12">
+                <button id="myBtn" class="button-04"><?=__("Subscribe","Subscribe")?></button>
+            </div>
+            <div class=" col l4 m6 s12">
+                <?php if(isset($data['next']) && $data['next']!=null ){ ?> <a href="/<?=App::getRouter()->getLanguage()?>/blog/view/<?=$data['next']['alias']?>/"><button class="button-03">Next Page</button></a> <?php }else{ ?> <div class="button_block"></div>  <?php } ?>
+            </div>
+        </div>
+    </div>
+</section><!-- Resource jQuery -->
+
+<section style="background-color:#414371;position:relative;">
+    <div class="my-container_footer">
+        <p class="ready"> <?=__("Ready to start?","Ready to start?")?></p>
+        <p class="hire"><a href="/<?=App::getRouter()->getLanguage()?>/contacts/"> <?=__("Hire us","Hire us")?></a></p>
+    </div>
+</section>
+
+<script>
+    // Get the modal
+    var modal = document.getElementById('myModal');
+
+    // Get the button that opens the modal
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks the button, open the modal
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+</body>

@@ -1,0 +1,182 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    .main_textarea{
+        background:none;
+
+        text-align:left;
+        width:70%;
+    }
+    .title_block{
+        background:none;
+        text-align:center;
+        min-width:100%;
+    }
+    .view_blog input{
+        color:#fff;
+        margin-top:50px;
+        font-size:34px;
+    }
+    .icon_textarea{
+        background:none;
+
+        text-align:center;
+        width:100%;
+        min-height:100px;
+    }
+    .add_bc{
+        float:right;
+    }
+
+</style>
+</head>
+<body>
+<form  method="POST" enctype="multipart/form-data">
+<div class="loader"></div>
+<section>
+    <div class="bc">
+        <div class="main_title">
+            <h1><textarea name="h1" class="main_textarea"><?=$data['text']['h1']?></textarea><br></h1>
+            <p class="expereince">
+                <textarea name="h2" class="main_textarea"><?=$data['text']['h2']?></textarea><br>
+            </p>
+        </div>
+    </div>
+
+</section>
+<!--<section>
+    <div class="bc2">
+        <div class="mask">
+            <div class="my-container34">
+                <div class="margin">
+                    <div style="float:left" >
+                        <a href="https://vk.com/id303311055" target="blank"><img src="img/vk.png"></a>
+                        <a href="https://vk.com/id303311055" target="blank"><img src="img/insta.png"></a>
+                    </div>
+                    <div style="float:right" >
+                        <p class="new32">380636729626</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="wrap">
+           <h1 class="up2">WE ARE SHARKS IN BUSINESS</h1>
+
+           <p class="up4">Maecenas ultrices hendrerit</p>
+           <button class="button-02">Связаться</button>
+       </div>
+   </div></div>
+</section>-->
+<section id="work">
+    <div class="left_img"><img src="/img/left.png"></div>
+    <div class="right_img"><img src="/img/right.png"></div>
+    <div class="row">
+        <p class="text_top1"><input class="title_block"  type="text" name="section_title"
+
+                                    value="<?=$data['text']['section_title']?>" ></p>
+        <hr>
+        <p class="new"><input class="title_block" type="text" name="section_describ" value="<?=$data['text']['section_describ']?>"  ></p>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span></span></div>
+            <p class="p101"><input class="title_block"  type="text" name="block1_title"
+
+                                            value="<?=$data['text']['block1_title']?>"></p>
+            <div class="mobile">
+                <p class="p103"><textarea name="block1_text" class="icon_textarea"><?=$data['text']['block1_text']?></textarea><br></p>
+            </div>
+
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span></span></div>
+            <p class="p101"><input class="title_block"  type="text" name="block2_title" value="<?=$data['text']['block2_title']?>" ></p>
+            <div class="mobile">
+                <p class="p103"><textarea name="block2_text" class="icon_textarea"><?=$data['text']['block2_text']?></textarea><br></p>
+            </div>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span></span></div>
+            <p class="p101"><input class="title_block"  type="text" name="block3_title"
+
+                                   value="<?=$data['text']['block3_title']?>" ></p>
+            <div class="mobile">
+                <p class="p103"><textarea  name="block3_text" class="icon_textarea"><?=$data['text']['block3_text']?></textarea><br></p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="bc2">
+        <label class="total" for="bc"><div class="add_bc"><img src="/img/add.png"></div></label>
+        <input style="display:none;" name='bc[]' id="bc"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+        <p class="text_top2"><input class="middle" type="text" name="all_need"
+                                    value="<?=$data['text']['all_need']?>" ></p>
+        <hr class="hr">
+        <p class="text_top2"><input class="middle" type="text" name="imza"
+                                   value="<?=$data['text']['imza']?>" ></p>
+
+        <p class="imza_club">
+            <textarea name="imza_text" class="middle_textarea" id="text_form"><?=$data['text']['imza_text']?></textarea>
+
+        </p>
+
+
+    </div>
+</section>
+
+<section style="position:relative;height:700px;">
+    <div class="blog_bc_up"></div>
+    <p class="view_blog"><input class="title_block"  type="text" name="blog"
+
+                                value="<?=$data['text']['blog']?>"></p>
+</section>
+    <section style="background-color:#414371;position:relative;">
+        <div class="my-container_footer">
+            <div class="row">
+                <div class=" col l25 m6 s12">
+                        <div class="company_logo">
+                            <img src="/company/logo1.png">
+                        </div>
+                        <label class="total" for="logo1"><div class="add2"><img src="/img/add.png"></div></label>
+                        <input style="display:none;" name='logo1[]' id="logo1"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                </div>
+                <div class=" col l25 m6 s12">
+                    <div class="company_logo">
+                        <img src="/company/logo3.png">
+                    </div>
+                    <label class="total" for="logo2"><div class="add2"><img src="/img/add.png"></div></label>
+                    <input style="display:none;" name='logo2[]' id="logo2"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                </div>
+                <div class=" col l25 m6 s12">
+                    <div class="company_logo">
+                        <img src="/company/logo4.png">
+                    </div>
+                        <label class="total" for="logo3"><div class="add2"><img src="/img/add.png"></div></label>
+                        <input style="display:none;" name='logo3[]' id="logo3"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+
+
+                </div>
+                <div class=" col l25 m6 s12">
+                    <div class="company_logo">
+                        <img src="/company/logo4.png">
+                    </div>
+                    <label class="total" for="logo4"><div class="add2"><img src="/img/add.png"></div></label>
+                    <input style="display:none;" name='logo4[]' id="logo4"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                </div>
+                <div class=" col l100 m6 s12">
+                    <div class="company_logo">
+                        <img src="/company/logo5.png">
+                    </div>
+                    <label class="total" for="logo5"><div class="add2"><img src="/img/add.png"></div></label>
+                    <input style="display:none;" name='logo5[]' id="logo5"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                </div>
+                <hr class="hr_footer">
+            </div>
+        </div>
+    </section>
+    <input type="submit" name="submit" class="submit button-02" value="SEND"/>
+</form>
+</body>
+</html>

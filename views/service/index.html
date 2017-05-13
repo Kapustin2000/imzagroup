@@ -1,0 +1,180 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+<style>
+
+    @media screen and (max-width: 960px) and (min-width: 300px) {
+     .absolute{
+         position:absolute;
+     }
+        .numbers_01,.numbers_02,.numbers_03{
+            margin-top:470px;
+        }
+        .row .col.l6 {
+            width:100%;
+        }
+        .our_service_block{
+            width:100%;
+            margin-bottom:50px;
+        }
+    }
+    @media screen and (max-width: 500px) and (min-width: 300px) {
+
+        .row .col.l4 {
+            width:100%;
+        }
+
+    }
+</style>
+
+</head>
+<body>
+
+<section>
+    <div class="title">
+        <p><?=__($data['text']['h1'],$data['text']['h1'])?></p>
+    </div>
+</section>
+<section id="work">
+    <div class="row">
+        <div id="trainings"></div>
+        <div class="col l6 m6 s12">
+
+            <div id="01" class="numbers_01">
+                <p class="service_p1">  <?=__($data['text']['block1_h1'],$data['text']['block1_h1'])?></p>
+            </div>
+            <p class="service_p2"><?=__($data['text']['block1_h2'],$data['text']['block1_h2'])?></p>
+            <hr>
+            <div class="our_service_block">
+              <?=__($data['text']['block1_text'],$data['text']['block1_text'])?>
+            </div>
+        </div>
+        <div class="service1 absolute for col l6 m6 s12">
+
+        </div>
+    </div>
+</section>
+<section class="blue">
+    <div class="my-container">
+        <div class="what_u_get_left">
+            <p>  <?=__($data['text']['what_get1'],$data['text']['what_get1'])?></p>
+            <hr class="what_u_get_left_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span class="team"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block1_icon1_text'],$data['text']['block1_icon1_text'])?> </p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span class="lead"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block1_icon2_text'],$data['text']['block1_icon2_text'])?></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span class="talk"></span></div>
+            <p class="get_adv">   <?=__($data['text']['block1_icon3_text'],$data['text']['block1_icon3_text'])?></p>
+        </div>
+
+    </div>
+</section>
+<section id="work">
+    <div class="row">
+        <div class="service2 absolute for col l6 m6 s12">
+
+        </div>
+        <div class="   col l6 m6 s12">
+            <div id="02" class="numbers_02">
+                <p class="service_p1"> <?=__($data['text']['block2_h1'],$data['text']['block2_h1'])?></p>
+            </div>
+            <p class="service_p2"> <?=__($data['text']['block2_h2'],$data['text']['block2_h2'])?></p>
+            <hr>
+            <div class="our_service_block">
+                 <?=__($data['text']['block2_text'],$data['text']['block2_text'])?>
+            </div>
+        </div>
+
+    </div>
+</section>
+<section class="red">
+    <div class="my-container">
+        <div class="what_u_get_right">
+            <p>  <?=__($data['text']['What_u_get2'],$data['text']['What_u_get2'])?></p>
+            <hr class="what_u_get_right_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span class="loop"></span></div>
+            <p class="get_adv"> <?=__($data['text']['block2_icon1_text'],$data['text']['block2_icon1_text'])?></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span class="time"></span></div>
+            <p class="get_adv"> <?=__($data['text']['block2_icon2_text'],$data['text']['block2_icon2_text'])?></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span  class="talk"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block2_icon3_text'],$data['text']['block2_icon3_text'])?></p>
+        </div>
+
+    </div>
+</section>
+<section id="work">
+    <div class="row">
+        <div class="   col l6 m6 s12">
+            <div id="03" class=" numbers_03">
+                <p class="service_p1"><?=__($data['text']['block3_h1'],$data['text']['block3_h1'])?></p>
+            </div>
+            <p class="service_p2"> <?=__($data['text']['block3_h2'],$data['text']['block3_h2'])?></p>
+            <hr>
+            <div class="our_service_block">
+                  <?=__($data['text']['block3_text'],$data['text']['block3_text'])?>
+            </div>
+        </div>
+        <div class="service3 absolute for col l6 m6 s12">
+
+        </div>
+    </div>
+</section>
+
+<section class="blue">
+    <div class="my-container">
+        <div class="what_u_get_left">
+            <p>   <?=__($data['text']['what_get3'],$data['text']['what_get3'])?></p>
+            <hr class="what_u_get_left_hr">
+        </div>
+    </div>
+    <div class="row">
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon"><span class="invest"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block3_icon1_text'],$data['text']['block3_icon1_text'])?></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon for1"><span class="shield"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block3_icon2_text'],$data['text']['block3_icon2_text'])?></p>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <div class="icon "><span class="talk"></span></div>
+            <p class="get_adv">  <?=__($data['text']['block3_icon3_text'],$data['text']['block3_icon3_text'])?></p>
+        </div>
+
+    </div>
+</section>
+<section style="background-color:#414371;position:relative;">
+    <div class="my-container_footer">
+        <div class="row">
+            <p class="ready"> <?=__($data['text']['footer_ask'],$data['text']['footer_ask'])?> </p>
+            <p class="hire"><a href="/<?=App::getRouter()->getLanguage()?>/contacts/"><?=__($data['text']['Hire'],$data['text']['Hire'])?></a></p>
+            <hr class="hr_footer">
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/css.css"/>
+    <meta name="description" content="">
+</head>
+
+<body>
+
+
+<form method="post" action="" enctype="multipart/form-data">
+<section>
+    <div class="title index">
+        <p><input class="title_block" value="<?=$data['text']['h1']?>" type="text" name="h1"></p>
+    </div>
+</section>
+<section class="index">
+    <div class="numbers_01">
+        <p class="new"><input class="title_block" value="<?=$data['text']['h2']?>" type="text" name="h2"></p>
+    </div>
+    <div class="row">
+        <div class=" col l3 m6 s12">
+            <div class="club_my_container">
+                <div class="pazzle"></div>
+                <p class="club_adv"><input class="blocks" value="<?=$data['text']['block1_title']?>" type="text" name="block1_title"></p>
+                <textarea name="block1_text" class="blocks_textarea"><?=$data['text']['block1_text']?></textarea>
+            </div>
+        </div>
+        <div class=" col l3 m6 s12">
+            <div class="club_my_container">
+                <div class="pazzle"></div>
+                <p class="club_adv"><input class="blocks" value="<?=$data['text']['block2_title']?>" type="text" name="block2_title"></p>
+                <textarea name="block2_text" class="blocks_textarea"
+                        ><?=$data['text']['block2_text']?></textarea>
+            </div>
+        </div>
+        <div class=" col l3 m6 s12">
+            <div class="club_my_container">
+                <div class="pazzle"></div>
+                <p class="club_adv"><input class="blocks" value="<?=$data['text']['block3_title']?>" type="text" name="block3_title"></p>
+                <textarea name="block3_text" class="blocks_textarea"
+                        ><?=$data['text']['block3_text']?></textarea>
+            </div>
+        </div>
+        <div class=" col l3 m6 s12">
+            <div class="club_my_container">
+                <div class="pazzle"></div>
+                <p class="club_adv"><input class="blocks" value="<?=$data['text']['block4_title']?>" type="text" name="block4_title"></p>
+                <textarea name="block4_text" class="blocks_textarea"
+                        ><?=$data['text']['block4_text']?></textarea>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="row">
+        <div class=" col l4 m6 s12">
+            <div class="gallery gallery1">                    <label class="total" for="add_photo1"><div class="add"><img src="/img/add.png"></div></label>
+                <input style="display:none;" name='add_photo1[]' id="add_photo1"  type='file' multiple='true'   min='1' max='10'  class="form-control"/></div>
+        </div>
+        <div class=" col l4 m6 s12">
+
+      <div class="gallery gallery2">                  <label class="total" for="add_photo2"><div class="add"><img src="/img/add.png"></div></label>
+          <input style="display:none;" name='add_photo2[]' id="add_photo2" type='file' multiple='true' min='1' max='10' class="form-control"/></div>
+        </div>
+        <div class=" col l4 m6 s12">
+
+           <div class="gallery gallery3">          <label class="total" for="add_photo3"><div class="add"><img src="/img/add.png"></div></label>
+               <input style="display:none;" name='add_photo3[]' id="add_photo3"  type='file' multiple='true'  min='1' max='10'  class="form-control"/> </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="my-container index">
+        <div class="numbers_02">
+            <p class="service_p1"><input name="icons_title" class="title_block" value="<?=$data['text']['icons_title']?>" type="text"
+
+                    ></p>
+        </div>
+        <div class="row">
+            <div class="trend_block  after contacts_block col l3 m6 s12">
+                <div class="icon"><span></span></div>
+                <p class="meet_imza_number"><input name="icon1_title" class="title_block" value="<?=$data['text']['icon1_title']?>" type="text"></p>
+                <p class="meet_imza_text"><input class="title_block" value="<?=$data['text']['icon1_text']?>" type="text" name="icon1_text"></p>
+            </div>
+            <div class="trend_block  after contacts_block col l3 m6 s12">
+                <div class="icon"><span></span></div>
+                <p class="meet_imza_number"><input name="icon2_title" class="title_block" value="<?=$data['text']['icon2_title']?>" type="text"></p>
+                <p class="meet_imza_text"><input class="title_block" value="<?=$data['text']['icon2_text']?>" type="text" name="icon2_text"></p>
+            </div>
+            <div class="trend_block  after contacts_block col l3 m6 s12">
+                <div class="icon"><span></span></div>
+                <p class="meet_imza_number"><input name="icon3_title" class="title_block" value="<?=$data['text']['icon3_title']?>" type="text"></p>
+                <p class="meet_imza_text"><input class="title_block" value="<?=$data['text']['icon3_text']?>" type="text" name="icon3_text"></p>
+            </div>
+            <div class="trend_block  after contacts_block col l3 m6 s12">
+                <div class="icon"><span></span></div>
+                <p class="meet_imza_number"><input name="icon4_title" class="title_block" value="<?=$data['text']['icon4_title']?>" type="text"></p>
+                <p class="meet_imza_text"><input class="title_block" value="<?=$data['text']['icon4_text']?>" type="text" name="icon4_text"></p>
+            </div>
+            <hr>
+            <p class="about_us_block">
+                <textarea name="after_icons" class="testim_block"><?=$data['text']['after_icons']?></textarea>
+
+            </p>
+        </div>
+    </div>
+</section>
+<section class="clients index">
+
+    <div class="row">
+
+
+
+                    <div class="   col l6 m6 s12">
+                        <p class="service_p2"><input name="testim1_author" class="title_block" value="<?=$data['text']['testim1_author']?>" type="text"></p>
+                        <hr>
+                        <div class="our_service_block">
+                         <textarea name="testim1_text" class="testim_block"><?=$data['text']['testim1_text']?></textarea>
+                        </div>
+                    </div>
+        <div class="testim1 absolute for col l6 m6 s12">
+            <label class="total" for="add_photo4"><div class="add"><img src="/img/add.png"></div></label>
+            <input style="display:none;" name='add_photo4[]' id="add_photo4" type='file' multiple='true' min='1' max='10' class="form-control"/>
+        </div>
+
+        <div class="   col l6 m6 s12">
+            <p class="service_p2"><input name="testim2_author" class="title_block" value="<?=$data['text']['testim2_author']?>" type="text"></p>
+            <hr>
+            <div class="our_service_block">
+                <textarea name="testim2_text" class="testim_block"><?=$data['text']['testim2_text']?></textarea>
+            </div>
+        </div>
+        <div class="testim2 absolute for col l6 m6 s12">
+            <label class="total" for="add_photo5"><div class="add"><img src="/img/add.png"></div></label>
+            <input style="display:none;" name='add_photo5[]' id="add_photo5" type='file' multiple='true' min='1' max='10' class="form-control"/>
+        </div>
+        <div class="   col l6 m6 s12">
+            <p class="service_p2"><input name="testim3_author" class="title_block" value="<?=$data['text']['testim3_author']?>" type="text"></p>
+            <hr>
+            <div class="our_service_block">
+                <textarea name="testim3_text" class="testim_block"><?=$data['text']['testim3_text']?></textarea>
+            </div>
+        </div>
+        <div class="testim3  absolute for col l6 m6 s12">
+            <label class="total" for="add_photo6"><div class="add"><img src="/img/add.png"></div></label>
+            <input style="display:none;" name='add_photo6[]' id="add_photo6" type='file' multiple='true' min='1' max='10' class="form-control"/>
+        </div>
+        </div>
+</section>
+    <section style="background-color:#414371;position:relative;">
+        <div class="my-container">
+            <div class="row">
+                <p class="ready"><input class="title_block" value="<?=$data['text']['footer_ask']?>" type="text" name="footer_ask"
+
+                        ></p>
+                <p class="hire"><input class="title_block" value="<?=$data['text']['Hire']?>" type="text" name="Hire"
+
+                        ></p>
+                <hr class="hr_footer">
+            </div>
+        </div>
+    </section>
+    <input type="submit" name="submit" class="submit button-02" value="SEND"/>
+    </form>
+<script src="/js/jquery-v1.10.2.min.js" type="text/javascript"></script>
+<script src="/js/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+<script src="/js/flickerplate.min.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.flicker-example').flicker();
+    });
+</script>
+
+
+</body>
+</html>

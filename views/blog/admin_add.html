@@ -1,0 +1,76 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    textarea{
+        background:none;
+        width:100%;
+        min-height:150px;
+    }
+    .alias{
+        background:none;
+        text-align:center;
+    }
+
+    .blog__inside_picture {
+        background: #ccc;
+        height: 440px;
+        width: 100%;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+</style>
+
+
+
+
+<body>
+
+<section>
+    <form method="post" action="" enctype="multipart/form-data">
+        <div class="title">
+            <p> <input class="alias"  name="alias" value="Alias of blog"/></p>
+        </div>
+
+        <!-- Модальное окно 1 -->
+        <div class="my-container">
+            <div class="half_container">
+                <p class="blog_inside_title"> <input type="text" id="title" name="title" value="Title of blog " class="" /></p>
+                <p class="blog_inside_date"> <input type="text" id="alias" name="dt_creation" value="Date when it was written "/></p>
+                <p class="blog_inside_first_text"><textarea  name="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit></textarea></p>
+            </div>
+            <div class="blog__inside_picture">
+                <label class="total" for="add_photo1"><div class="add"><img src="/img/add.png"></div></label>
+                <input style="display:none;" name='add_photo1[]' id="add_photo1"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+            </div>
+            <div class="half_container">
+                <p class="blog_inside_first_text"><textarea  name="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit></textarea></p>
+
+                <div class="blue">
+                    <div class="row">
+                        <div class="col l2 m6 s12">
+                            <span class="quo">&#8221;</span>
+                        </div>
+                        <div class="col l8 m6 s12">
+                            <p class="theme"><textarea  name="quot">Lorem ipsum dolor sit amet, consectetur atatis et quaquia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</textarea></p>
+                        </div>
+                    </div>
+                </div>
+                <p class="blog_inside_last_text"><textarea  name="text3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit</textarea></p>
+            </div>
+            <input type="submit" name="submit" class="submit button-02" value="SEND"/>
+        </div>
+    </form>
+</section>
+</body>
+

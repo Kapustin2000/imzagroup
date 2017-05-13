@@ -1,0 +1,169 @@
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Lumino - Panels</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/datepicker3.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--Icons-->
+    <script src="js/lumino.glyphs.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+
+
+<div class="col-sm-9 col-sm-offset-3 col-lg-10 col-lg-offset-2 main">
+    <div class="row">
+        <ol class="breadcrumb">
+            <li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
+            <li class="active">Icons</li>
+        </ol>
+    </div><!--/.row-->
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Товары</h1>
+        </div>
+    </div><!--/.row-->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2>Tab Panels</h2>
+        </div>
+
+
+            <div class="panel panel-default">
+                <div class="panel-body tabs">
+
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#pilltab1" data-toggle="tab">EN</a></li>
+                        <li><a href="#pilltab2" data-toggle="tab">RU</a></li>
+                        <li><a href="#pilltab3" data-toggle="tab">AZ</a></li>
+                        <li class="active" style="float:right;"><a href="/admin/translate/add">ADD WORD</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="pilltab1">
+                            <?php if(unserialize($data['en'][0]['array'])!=null) { ?>
+                            <table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-translate="name" data-sort-order="desc">
+                                <thead>
+                                <tr>
+                                    <th data-field="word" data-sortable="true">Word</th>
+                                    <th style="width:5%" data-field="translate" data-sortable="true">Translate of word</th>
+                                    <th style="width:5%" data-field="actions" data-sortable="true">Actions</th>
+                                </tr>
+                                </thead>
+                                <?php foreach(unserialize($data['en'][0]['array']) as $key => $value){ ?>
+                                <tr>
+                                    <td><?=str_replace("&nbsp;", " ", "$key");?></td>
+                                    <td><?=str_replace("&nbsp;", " ", "$value");?></td>
+                                    <td>	<div class="pull-right action-buttons todo-list" >
+                                        <a href="/admin/translate/delete/en_<?=str_replace('&nbsp;', '%20', $key)?>" onclick="return confirmDelete();" class="trash"><svg class="glyph stroked trash"><use xlink:href="#stroked-trash"></use></svg></a>
+                                    </div></td>
+                                </tr>
+                                <?php } ?>
+                            </table>
+                            <?php }else{ ?>
+                           <h4> EN translator is empty</h4>
+                            <?php } ?>
+                        </div>
+                        <div class="tab-pane fade" id="pilltab2">
+                            <?php if(unserialize($data['ru'][0]['array'])!=null) { ?>
+                            <table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-translate="name" data-sort-order="desc">
+                                <thead>
+                                <tr>
+                                    <th data-field="word" data-sortable="true">Word</th>
+                                    <th style="width:5%" data-field="translate" data-sortable="true">Translate of word</th>
+                                    <th style="width:5%" data-field="actions" data-sortable="true">Actions</th>
+                                </tr>
+                                </thead>
+                                <?php foreach(unserialize($data['ru'][0]['array']) as $key => $value){ ?>
+                                <tr>
+                                    <td><?=str_replace("&nbsp;", " ", "$key");?></td>
+                                    <td><?=str_replace("&nbsp;", " ", "$value");?></td>
+                                    <td>	<div class="pull-right action-buttons todo-list" >
+                                        <a href="/admin/translate/delete/ru_<?=str_replace('&nbsp;', '%20', $key)?>" onclick="return confirmDelete();" class="trash"><svg class="glyph stroked trash"><use xlink:href="#stroked-trash"></use></svg></a>
+                                    </div></td>
+                                </tr>
+                                <?php } ?>
+                            </table>
+                            <?php }else{ ?>
+                            <h4> RU translator is empty</h4>
+                            <?php } ?>
+                        </div>
+                        <div class="tab-pane fade" id="pilltab3">
+                            <?php if(unserialize($data['az'][0]['array'])!=null) { ?>
+                            <table data-toggle="table" data-url="tables/data1.json"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-translate="name" data-sort-order="desc">
+                                <thead>
+                                <tr>
+                                    <th data-field="word" data-sortable="true">Word</th>
+                                    <th style="width:5%" data-field="translate" data-sortable="true">Translate of word</th>
+                                    <th style="width:5%" data-field="actions" data-sortable="true">Actions</th>
+                                </tr>
+                                </thead>
+                                <?php foreach(unserialize($data['az'][0]['array']) as $key => $value){ ?>
+                                <tr>
+                                    <td><?=str_replace("&nbsp;", " ", "$key");?></td>
+                                    <td><?=str_replace("&nbsp;", " ", "$value");?></td>
+                                    <td>	<div class="pull-right action-buttons todo-list" >
+                                        <a href="/admin/translate/delete/az_<?=str_replace('&nbsp;', '%20', $key)?>" onclick="return confirmDelete();" class="trash"><svg class="glyph stroked trash"><use xlink:href="#stroked-trash"></use></svg></a>
+                                    </div></td>
+                                </tr>
+                                <?php } ?>
+                            </table>
+                            <?php }else{ ?>
+                            <h4> Az translator is empty</h4>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.panel-->
+
+    </div><!-- /.row -->
+
+</div><!--/.main-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/chart.min.js"></script>
+<script src="js/chart-data.js"></script>
+<script src="js/easypiechart.js"></script>
+<script src="js/easypiechart-data.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script>
+    !function ($) {
+        $(document).on("click","ul.nav li.parent > a > span.icon", function(){
+            $(this).find('em:first').toggleClass("glyphicon-minus");
+        });
+        $(".sidebar span.icon").find('em:first').addClass("glyphicon-plus");
+    }(window.jQuery);
+
+    $(window).on('resize', function () {
+        if ($(window).width() > 768) $('#sidebar-collapse').collapse('show')
+    })
+    $(window).on('resize', function () {
+        if ($(window).width() <= 767) $('#sidebar-collapse').collapse('hide')
+    })
+</script>
+</body>
+
+</html>
+
+
+
+

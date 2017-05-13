@@ -1,0 +1,95 @@
+<!-- Resource jQuery -->
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <style>
+        #submitForm #name_form, #submitForm #email_form, #submitForm #phone_form ,
+        #applicationName, #applicationEmail, #applicationTelephone {
+            width: 80%;
+            height: 40px;
+            margin-top: 10px;
+            border: none;
+            background:#ececf0;
+            text-align: left;
+            font: 300 12px/1.3 "Roboto", sans-serif;
+            color: #000;
+            left:0;
+            padding-left: 15px;
+            margin-right: 15px;
+        }
+        #submitForm textarea{
+            width:95%;
+        }
+        textarea,input{
+            background:none;
+            text-align:left;
+        }
+        textarea{
+            width:100%;min-height:150px;
+        }
+        .my-container_content{
+            width:80%;
+            margin:0 auto;
+        }
+        @media screen and (max-width: 900px) and (min-width: 300px) {
+            .my-container_content{
+                width:90%;
+                margin:0 auto;
+            }
+        }
+        @media screen and (max-width: 870px) and (min-width: 300px){
+            .row .col.l6 {
+                width: 100%;
+            }
+            .button-02{
+                float:none;
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+<form method="post" action="" enctype="multipart/form-data">
+<section>
+    <div class="title">
+        <p>   <input  value="<?=$data['text']['page_h1']?>" type="text" name="page_h1"></p>
+    </div>
+</section>
+<section>
+    <div class="my-container_content">
+        <div class="what_u_get_left2 ">
+            <p class="title_contacts">
+                <input value="<?=$data['text']['h1']?>" type="text" name="h1"></p>
+            <hr class="what_u_get_left_hr2">
+            <p class="describe_contacts">
+                <input  value="<?=$data['text']['h2']?>" type="text" name="h2">
+            </p>
+
+        </div>
+
+        <div class="row">
+            <div class=" col l6 m6 s12">
+                <div class="contact_block">
+                    <p>    <textarea  name="main_text"><?=$data['text']['main_text']?></textarea></p> <br>
+                    <p>  <input  value="<?=$data['text']['adress']?>" type="text" name="adress"></p>
+                    <p>  <input  value="<?=$data['text']['phone']?>" type="text" name="phone"> </p>
+                    <p>  <input  value="<?=$data['text']['mail']?>" type="text" name="mail"></p><br>
+                    <p>    <input  value="<?=$data['text']['days']?>" type="text" name="days"></p>
+                    <p class="padding_bottom">  <input  value="<?=$data['text']['days2']?>" type="text" name="days2"></p>
+                </div>
+                <input type="submit" name="submit" class="submit button-02" value="Save page"/>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+</form>
+</body>
+</html>
