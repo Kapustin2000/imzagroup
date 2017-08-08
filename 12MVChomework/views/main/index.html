@@ -1,0 +1,223 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+    @media screen and (max-width: 1000px) and (min-width: 300px){
+        .main_title{
+            width:100%;
+            left:0;
+        }
+
+        h1{
+            padding-left:20px;
+        }
+        .expereince,.learn_more{
+            padding-left:20px;
+            padding-right:30px;
+        }
+    }
+    @media screen and (max-width: 1200px) and (min-width: 600px){
+
+        .left_img,.right_img{
+            top:0;
+        }
+        .left_img img,.right_img img{
+            width:60%;
+        }
+        .right_img img{
+            right:0;
+            position:absolute;
+        }
+    }
+    @media screen and (max-width: 870px) and (min-width: 300px){
+        .row .col.l4 {
+            width: 100%;
+        }
+        .trend_block{
+            margin-bottom:140px;
+        }
+        .left_img ,.right_img{
+            display:none;
+        }
+        .row .col.l25 {
+            width: 50%;
+        }
+        .row .col.l100 {
+            width: 100%;
+        }
+        .hr_footer{
+            height:2px;
+        }
+    }
+    @media screen and (max-width: 500px) and (min-width: 300px){
+        .row .col.l3 {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 600px) and (min-width: 300px){
+        .imza_club {
+            width: 100%;
+        }
+        .blog_img,.blog_text{
+            width:80%;
+        }
+    }
+    @media screen and (max-width: 400px) and (min-width: 300px){
+        .row .col.l25 {
+            width: 100%;
+        }
+    }
+</style>
+</head>
+<body>
+
+
+<div class="loader"></div>
+
+<section style="position:relative;">
+    <div class="main_title">
+        <h1><?=__($data['text']['h1'],$data['text']['h1'])?></h1>
+        <p class="expereince"><?=__($data['text']['h2'],$data['text']['h2'])?></p>
+      <a class="learn_more" href="/<?=App::getRouter()->getLanguage()?>/about/"><?=__("learn more","learn more")?></a>
+    </div>
+    <video autoplay loop class="bgvideo" id="bgvideo">
+        <source src="/img/video.mp4" type="video/mp4"></source>
+    </video>
+    <div class="bc_main">
+
+    </div>
+</section>
+
+
+    <!--<section>
+    <div class="bc2">
+        <div class="mask">
+            <div class="my-container34">
+                <div class="margin">
+                    <div style="float:left" >
+                        <a href="https://vk.com/id303311055" target="blank"><img src="img/vk.png"></a>
+                        <a href="https://vk.com/id303311055" target="blank"><img src="img/insta.png"></a>
+                    </div>
+                    <div style="float:right" >
+                        <p class="new32">380636729626</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="wrap">
+           <h1 class="up2">WE ARE SHARKS IN BUSINESS</h1>
+
+           <p class="up4">Maecenas ultrices hendrerit</p>
+           <button class="button-02">Связаться</button>
+       </div>
+   </div></div>
+</section>-->
+<section id="work">
+    <div class="left_img"><img src="/img/left.png"></div>
+    <div class="right_img"><img src="/img/right.png"></div>
+    <div class="row">
+        <p class="text_top1"><?=__($data['text']['section_title'],$data['text']['section_title'])?></p>
+        <hr>
+        <p class="new"> <?=__($data['text']['section_describ'],$data['text']['section_describ'])?></p>
+        <div class="trend_block2 col l4 m6 s12">
+            <a href="/<?=App::getRouter()->getLanguage()?>/service/">
+
+            <div class="icon "><span class="stats"></span></div>
+            <p class="p101">  <?=__($data['text']['block1_title'],$data['text']['block1_title'])?></p>
+            <div class="mobile">
+                <p class="p103">  <?=__($data['text']['block1_text'],$data['text']['block1_text'])?></p>
+            </div>
+            </a>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <a  href="/<?=App::getRouter()->getLanguage()?>/service/">
+            <div class="icon for1"><span class="key"></span></div>
+            <p class="p101"> <?=__($data['text']['block2_title'],$data['text']['block2_title'])?></p>
+            <div class="mobile">
+                <p class="p103">  <?=__($data['text']['block2_text'],$data['text']['block2_text'])?></p>
+            </div>
+             </a>
+        </div>
+        <div class="trend_block2 col l4 m6 s12">
+            <a href="/<?=App::getRouter()->getLanguage()?>/service/">
+            <div class="icon "><span class="money"></span></div>
+            <p class="p101">   <?=__($data['text']['block3_title'],$data['text']['block3_title'])?></p>
+            <div class="mobile">
+                <p class="p103">  <?=__($data['text']['block3_text'],$data['text']['block3_text'])?></p>
+            </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="bc2">
+        <p class="text_top2"> <?=__($data['text']['all_need'],$data['text']['all_need'])?></p>
+        <hr>
+        <p class="new32"> <?=__($data['text']['imza'],$data['text']['imza'])?></p>
+        <p class="imza_club"><?=__($data['text']['imza_text'],$data['text']['imza_text'])?></p>
+        <div class="down">
+            <a href="/<?=App::getRouter()->getLanguage()?>/imza/"><button class="button-01"><?=__("learn more","learn more")?></button></a>
+        </div>
+    </div>
+</section>
+<section style="position:relative;">
+    <div class="view_blog"> <p><a href="/<?=App::getRouter()->getLanguage()?>/blog/"><?=__($data['text']['blog'],$data['text']['blog'])?></a></p></div>
+    <div class="blog_bc_up"></div>
+    <div class="row">
+        <?php for($i=0;$i<count($data['news']);$i++) { ?>
+        <div class="trend_block relative col l4 m6 s12">
+            <a href="/<?=App::getRouter()->getLanguage()?>/blog/view/<?=$data['news'][$i]['alias']?>">
+                <div style="background:url('/uploads/blog/<?=$data['news'][$i]['img']?>.jpg') no-repeat;background-size:cover;" class="blog_img"></div>
+            <div class="blog_text">
+                <p class="news_main"><?=unserialize($data['news'][$i]['array'])['title']?></p>
+                <p class="news_date"><?=unserialize($data['news'][$i]['array'])['dt_creation']?></p>
+                <p class="news_info"><?=substr(unserialize($data['news'][$i]['array'])['text'], 0, 120);?>...</p>
+            </div>
+            </a>
+        </div>
+    <?php } ?>
+        </div>
+    <div class="blog_bc_down"></div>
+</section>
+
+<section style="background-color:#414371;position:relative;">
+    <div class="my-container_footer">
+        <div class="row">
+            <div class=" col l25 m6 s12">
+                <div class="company_logo">
+                    <img src="/company/logo1.png">
+                </div>
+            </div>
+            <div class=" col l25 m6 s12">
+                <div class="company_logo">
+                    <img src="/company/logo2.png">
+                </div>
+            </div>
+            <div class=" col l25 m6 s12">
+                <div class="company_logo">
+                    <img src="/company/logo3.png">
+                </div>
+
+            </div>
+            <div class=" col l25 m6 s12">
+                <div class="company_logo">
+                    <img src="/company/logo4.png">
+                </div>
+            </div>
+            <div class=" col l100 m6 s12">
+                <div class="company_logo">
+                    <img src="/company/logo5.png">
+                </div>
+            </div>
+            <hr class="hr_footer">
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+
+
+    .row:after {
+        content: "";
+
+    }
+
+    .row .col.s12 {
+        width: 100%;
+        margin-left: 0
+    }
+
+    .row .col.l3 {
+        width: 25%;
+    }
+
+    .row .col.l25 {
+        width: 20%;
+    }
+
+    .row .col.l100 {
+        width: 20%;
+    }
+
+    .row .col.l4 {
+        width: 33.33333%;
+        margin-left: 0;
+    }
+
+    .row .col.l6 {
+        width: 50%;
+        margin-left: 0;
+    }
+
+    .row .col.l1 {
+        width: 33.33333%;
+    }
+
+    .row .col.l7 {
+        width: 58.33333%;
+        margin-left: 0
+    }
+
+    .row .col.l5 {
+        width: 41.66667%;
+        margin-left: 0
+    }
+
+    @media screen and (max-width: 4000px) and (min-width: 960px) {
+        .my-container {
+            width: 960px;
+            margin: 0 auto;
+        }
+    }
+</style>
+<body>
+
+<section>
+    <div style="   height:120px;
+        width:100%;
+        background-color:#414371;">
+        <p style="    color:#fff;
+        font-weight:600;
+        font-size:36px;
+        text-align:center;
+        text-transform: uppercase;
+        padding-top:50px;">Blog</p>
+    </div>
+
+    <!-- Модальное окно 1 -->
+    <div class="my-container">
+        <div style=" width:80%;
+        margin:0 auto;">
+            <p style="    font-size:24px;
+        font-weight:600;
+        color:#414371;
+        padding-top:50px;"><?=$message['title']?></p>
+
+            <p style="  font-size:18px;
+        font-weight:400;
+        color:#bcbdc9;
+        padding-top:10px;
+        padding-bottom:80px;"><?=$message['dt_creation']?></p>
+
+            <p style="  font-size:22px;
+        font-weight:300;
+        color:#414371;
+        line-height:30px;
+        padding-bottom:40px;"><?=$message['text']?></p>
+        </div>
+        <div style="  background: url('http://imzagroup.az/uploads/blog/<?=$data['img']?>.jpg') no-repeat;
+        height: 440px;
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: top;
+        margin-bottom: 40px;  background: url(/uploads/blog/<?=$data['img']?>.jpg) no-repeat;
+        height: 440px;
+        width: 100%;
+        position: relative;
+        background-size: cover;
+        background-position: top;
+        margin-bottom: 40px;">
+
+        </div>
+        <div style="    width: 80%;
+    margin: 0 auto;">
+            <p style="    font-size: 22px;
+    font-weight: 300;
+    color: #414371;
+    line-height: 30px;
+    padding-bottom: 40px;"><?=$message['text2']?></p>
+            <div style="   margin-left: auto;
+        margin-right: auto;    display: table;
+        clear: both">
+
+
+            <div style="background-color:#414371; height:150px;position:relative;">
+                <div style="
+        box-sizing: border-box;">
+                    <div style="         float:left;margin-top:70px;position:absolute;width: 16.66667%;" class="col l2 m6 s12">
+                        <span style="     font-size: 150px;
+        margin: 0 auto;
+        color: #ccc;
+        top: 21px;
+        transform: translateX(-50%);
+        font-weight: bold;
+        position: relative;
+        left: 50%;">&#8221;</span>
+                    </div>
+                    <div style="float:left;left:150px;position:relative;width: 66.66667%;
+    margin-left: 0;" class="col l8 m6 s12">
+                        <p style="   color:#fff;
+        font-size:18px;
+        font-weight:400;
+        padding-top:40px;
+        padding-left:30px;"><?=$message['quot']?></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <p style="      font-size:22px;
+        font-weight:300;
+        color:#414371;
+        padding-top:40px;
+        line-height:30px;
+        padding-bottom:80px;"><?=$message['text3']?></p>
+        </div>
+            </div>
+</section>
+<!-- Resource jQuery -->
+
+<section style="background-color:#414371;position:relative;">
+    <div style="background-color:#414371;position:relative;">
+        <div style="  width:80%;
+        margin:0 auto;">
+            <p style="      font-size:24px;
+        color:#ababbc;
+        font-weight:400;
+        padding-top:50px;
+        text-align:center;"> Ready to start?</p>
+
+            <p style=" text-transform: uppercase;
+        font-size:30px;
+        font-weight:600;
+        text-align:center;
+        padding-top:10px;
+        padding-bottom:50px;
+        color:#fff;!important"><a style="text-transform: uppercase;
+        font-size:30px;
+        font-weight:600;
+        text-align:center;
+        padding-top:10px;
+
+        padding-bottom:50px;
+        color:#fff;" href="site/contacts/"> Hire us</a></p>
+        </div>
+    </div>
+</section>
+
+
+</body>
+</html>

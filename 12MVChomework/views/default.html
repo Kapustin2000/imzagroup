@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        <?= Config::get('site_name') ?>
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/css.css"/>
+    <!---->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <!-- CSS reset -->
+    <script src="/js/jquery-2.1.1.js"></script>
+    <script src="/js/velocity.min.js"></script>
+    <script src="/js/main.js"></script>
+    <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#loading").fadeOut("slow");
+        })
+    </script>
+
+<style>
+
+    .hire a{
+        color:#fff;!important
+    }
+
+
+
+    #loading{
+        background-color: #424370;
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        z-index: 999;
+        margin-top: 0px;
+        top: 0px;
+    }
+    #loading-center{
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #loading-center-absolute {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        height: 60px;
+        width: 60px;
+        margin-top: -30px;
+        margin-left: -30px;
+        -webkit-animation: loading-center-absolute 1s infinite;
+        animation: loading-center-absolute 1s infinite;
+
+    }
+    .object{
+        width: 20px;
+        height: 20px;
+        background-color: #FFF;
+        float: left;
+        -moz-border-radius: 50% 50% 50% 50%;
+        -webkit-border-radius: 50% 50% 50% 50%;
+        border-radius: 50% 50% 50% 50%;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    .object:nth-child(2n+0) {
+        margin-right: 0px;
+
+    }
+    #object_one{
+        -webkit-animation: object_one 1s infinite;
+        animation: object_one 1s infinite;
+    }
+    #object_two{
+        -webkit-animation: object_two 1s infinite;
+        animation: object_two 1s infinite;
+    }
+    #object_three{
+        -webkit-animation: object_three 1s infinite;
+        animation: object_three 1s infinite;
+    }
+    #object_four{
+        -webkit-animation: object_four 1s infinite;
+        animation: object_four 1s infinite;
+    }
+
+    @-webkit-keyframes loading-center-absolute{
+        100% {
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+
+    }
+    @keyframes loading-center-absolute{
+        100% {
+            -ms-transform: rotate(360deg);
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+
+
+
+    @-webkit-keyframes object_one{
+        50% {
+            -ms-transform: translate(20px,20px);
+            -webkit-transform: translate(20px,20px);
+            transform: translate(20px,20px);
+        }
+    }
+    @keyframes object_one{
+        50% {
+            -ms-transform: translate(20px,20px);
+            -webkit-transform: translate(20px,20px);
+            transform: translate(20px,20px);
+        }
+    }
+
+
+    @-webkit-keyframes object_two{
+        50% {
+            -ms-transform: translate(-20px,20px);
+            -webkit-transform: translate(-20px,20px);
+            transform: translate(-20px,20px);
+        }
+    }
+    @keyframes object_two{
+        50% {
+            -ms-transform: translate(-20px,20px);
+            -webkit-transform: translate(-20px,20px);
+            transform: translate(-20px,20px);
+        }
+    }
+
+
+
+    @-webkit-keyframes object_three{
+        50% {
+            -ms-transform: translate(20px,-20px);
+            -webkit-transform: translate(20px,-20px);
+            transform: translate(20px,-20px);
+        }
+    }
+    @keyframes object_three{
+        50% {
+            -ms-transform: translate(20px,-20px);
+            -webkit-transform: translate(20px,-20px);
+            transform: translate(20px,-20px);
+        }
+    }
+
+
+
+    @-webkit-keyframes object_four{
+        50% {
+            -ms-transform: translate(-20px,-20px);
+            -webkit-transform: translate(-20px,-20px);
+            transform: translate(-20px,-20px);
+        }
+    }
+    @keyframes object_four{
+        50% {
+            -ms-transform: translate(-20px,-20px);
+            -webkit-transform: translate(-20px,-20px);
+            transform: translate(-20px,-20px);
+        }
+    }
+
+</style>
+</head>
+<body>
+<div id="loading">
+    <div id="loading-center">
+        <div id="loading-center-absolute">
+            <div class="object" id="object_one"></div>
+            <div class="object" id="object_two"></div>
+            <div class="object" id="object_three"></div>
+            <div class="object" id="object_four"></div>
+
+        </div>
+    </div>
+
+</div>
+<div id="top"></div>
+<header style="height:80px;position:relative;background-color:#fff;">
+    <div style="position:fixed;background-color:#fff;height:80px;width:100%;">
+            <a class="cd-logo" href="/<?=App::getRouter()->getLanguage()?>/main"><img class="logo_pic" src="/img/logo.png" alt="Logo"><img src="/img/logo_text.png" class="text_logo"></a>
+        <div class="cd-overlay-nav">
+            <span></span>
+        </div>
+        <!-- cd-overlay-nav -->
+
+        <div class="cd-overlay-content">
+            <span></span>
+        </div>
+        <!-- cd-overlay-content -->
+        <p class="languages"><a <?php if(App::getRouter()->getLanguage()=='ru'){?> style="color:#414371;" <?php } ?> href="/ru<?=Language?>">RU</a><span>&mdash;</span><a <?php if(App::getRouter()->getLanguage()=='en'){?> style="color:#414371;" <?php } ?> href="/en<?=Language?>">EN</a><span>&mdash;</span><a <?php if(App::getRouter()->getLanguage()=='az'){?> style="color:#414371;" <?php } ?> href="/az<?=Language?>">AZ</a></p>   <a href="#menu"
+                                                                                            class="cd-nav-trigger">Menu<span
+            class="cd-icon"></span></a>
+        <nav>
+            <ul class="cd-primary-nav">
+                <div style="position:absolute;"><img style="height:60px;position:absolute;" src="/img/logo.png">
+
+                    <img src="/img/logo_text.png" style="color:#414371;font-size:24px;padding-left:70px;padding-top:15px;"></div>
+                <li><a href="/<?=App::getRouter()->getLanguage()?>/about/">About</a></li>
+                <li><a href="/<?=App::getRouter()->getLanguage()?>/service/">Our services</a></li>
+                <li><a href="/<?=App::getRouter()->getLanguage()?>/imza/">Imza club</a></li>
+                <li><a href="/<?=App::getRouter()->getLanguage()?>/contacts/">Contact</a></li>
+                <li><a href="/<?=App::getRouter()->getLanguage()?>/blog/">Blog</a></li>
+                <div style="position: absolute;bottom: 0;right: 0"><img style="width:300px;" src="/img/right.png">
+                </div>
+                <div style="position: relative;bottom: 0;left: 0">
+
+                    <p class="soc"><a href="https://www.facebook.com/imzagroupaz" target="_blank">Facebook</a></p>
+
+
+                    <p class="soc"><a href="https://www.instagram.com/imzagroup/" target="_blank">Intagram</a></p>
+
+                    <p class="footer_after"><a href="https://www.linkedin.com/organization/17943892" target="_blank">Linkedin</a></p>
+                </div>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="starter-template">
+    <?php if(Session::hasFlash()){?>
+    <div class="alert alert-info" role="alert">
+        <?php Session::flash(); ?>
+    </div>
+    <?php } ?>
+    <?= $data['content'] ?>
+</div>
+
+
+<section style="background-color:#414371;position:relative;overflow:hidden;">
+    <div class="my-container_footer">
+        <div class="footer_right"></div>
+        <div class="footer_left"></div>
+        <div class="row">
+            <div class="footer_links col l33_footer m6 s12">
+                <p class="footer_tags">Useful links</p>
+
+                <div class="footer">
+                    <p><a href="/<?=App::getRouter()->getLanguage()?>/about/">About</a></p>
+
+                    <p><a href="/<?=App::getRouter()->getLanguage()?>/service/">Our Services</a></p>
+
+                    <p><a href="/<?=App::getRouter()->getLanguage()?>/imza/">Imza Club</a></p>
+
+                    <p><a href="/<?=App::getRouter()->getLanguage()?>/contacts/">Contact</a></p>
+
+                    <p class="footer_after"><a href="/<?=App::getRouter()->getLanguage()?>/blog/">Blog</a></p>
+                </div>
+            </div>
+            <div class="footer_links col l33_footer m6 s12">
+                <p class="footer_tags">Social</p>
+
+                <div class="footer">
+
+                    <p><a href="https://www.facebook.com/imzagroupaz" target="_blank">Facebook</a></p>
+
+
+                    <p><a href="https://www.instagram.com/imzagroup/" target="_blank">Intagram</a></p>
+
+                    <p class="footer_after"><a href="https://www.linkedin.com/organization/17943892" target="_blank">Linkedin</a></p>
+                </div>
+            </div>
+            <div class="footer_links col lhalf m6 s12">
+                <div class="contacts">
+                    <p class="footer_tags">Contact Us</p>
+
+                    <div class="footer">
+
+                        <p>Phone +994 123100908</p>
+
+                        <p>office@imzagroup.az</p>
+
+                        <p> Monday to Friday 9.00 to 18:00 </p>
+
+                        <p>Jalil Mammadkulizada 102A, City Point BC, 2nd floor </p>
+
+                        <p class="footer_after">Azerbaijan, Bakı 1022 </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="hr_footer">
+            <div class="index relative">
+
+
+            <p class="imza">©ImzaGroup</p>
+            <p class="back_to_top"><a href="#top">Back to top<img style="padding-left:10px" src="/img/arrow.png"></a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+</body>
+
+</html>
+
+

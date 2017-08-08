@@ -1,0 +1,162 @@
+<!-- Resource jQuery -->
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <style>
+        .projects_top {
+            font-size: 24px;
+            text-align: center;
+            color: #4e495c;
+            padding-top: 50px;
+        }
+
+        .projects_bottom {
+            font-size: 18px;
+            text-align: center;
+            color: #4e495c;
+            padding-top: 20px;
+            padding-bottom: 30px;
+        }
+
+        .projects_bottom span {
+            color: #888B8D;
+        }
+        .project_img {
+            width: 70%;;
+            height: 300px;
+            margin: 0 auto;
+        }
+        .project_text{
+            height:130px;
+            background-color:#fff;
+            width:70%;
+            margin:0 auto;
+        }
+        .project_pic {
+            background: #ccc;
+            height: 400px;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            background-size: cover;
+            margin-top:10px;
+            background-position: top;
+        }
+        .padding-bottom-20{
+            padding-bottom:20px;
+        }
+        .width-600{
+            width:800px;
+            margin:0 auto;
+        }
+        .related{
+            color: #888B8D;
+            text-transform: uppercase;
+            position: relative;
+            letter-spacing: 0;
+            font-size: 16px;
+            line-height: 32px;
+            font-weight: 100;
+            text-align:center;
+            padding-top:40px;
+        }
+        .title_proj,.alias_proj{
+            text-align:center;
+            background:none;
+        }
+        input,.textarea{
+            background:none;
+        }
+        textarea{
+            width:100%;
+        }
+        .blog_inside_title{
+            margin-top:100px;
+        }
+        .project_pic_1 {
+            background: url("/uploads/projects/<?=$data['id']['img']?>first.jpg") no-repeat;
+            height: 400px;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: top;
+        }
+
+        .project_pic_2 {
+            background: url("/uploads/projects/<?=$data['id']['img']?>second.jpg") no-repeat;
+            height: 400px;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: top;
+        }
+
+        .project_pic_3 {
+            background: url("/uploads/projects/<?=$data['id']['img']?>third.jpg") no-repeat;
+            height: 400px;
+            width: 80%;
+            position: relative;
+            margin: 0 auto;
+            background-size: cover;
+            background-position: top;
+        }
+
+    </style>
+</head>
+
+<body>
+<form method="post" action="" enctype="multipart/form-data">
+    <input type="hidden" name="id" value="<?=$data['id']['id']?>"/>
+    <input type="hidden" name="img" value="<?=$data['id']['img']?>"/>
+    <div class="title">
+        <p> <input  class="alias_proj"  name="alias" value="<?=$data['page']['alias']?>"/></p>
+    </div>
+    <section class="clients">
+
+        <p class="projects_top"> <input class="title_proj"  name="title" value="<?=$data['page']['title']?>"/></p>
+
+        <p class="projects_bottom"><input    name="client" value="<?=$data['page']['client']?>"/> :<span> <input    name="your_client" value="<?=$data['page']['your_client']?>"/></span></p>
+        <p class="projects_bottom"><input class="category"   name="category" value="<?=$data['page']['category']?>"/></p>
+        <div class="row">
+
+            <div class="flicker-example" data-block-text="false">
+                <ul>
+                    <li>
+                        <div class="project_pic_1">
+                            <label class="total" for="add_photo1"><div class="add"><img src="/img/add.png"></div></label>
+                            <input style="display:none;" name='add_photo1[]' id="add_photo1"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project_pic_2">
+                            <label class="total" for="add_photo2"><div class="add"><img src="/img/add.png"></div></label>
+                            <input style="display:none;" name='add_photo2[]' id="add_photo2"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project_pic_3">
+                            <label class="total" for="add_photo3"><div class="add"><img src="/img/add.png"></div></label>
+                            <input style="display:none;" name='add_photo3[]' id="add_photo3"  type='file' multiple='true'   min='1' max='10'  class="form-control"/>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="width-600">
+                <p class="blog_inside_title padding-bottom-20"><input    name="description_top" value="<?=$data['page']['description_top']?>"/> </p>
+                <p class="blog_inside_first_text"><textarea  name="description_bottom"><?=$data['page']['description_bottom']?> </textarea></p>
+            </div>
+
+        </div>
+    </section>
+
+    <input type="submit" name="submit" class="submit button-02" value="SEND"/>
+</form>
+</body>
+</html>
